@@ -1,19 +1,17 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System;
 
-namespace MyWebPage.Pages;
-
-public class IndexModel : PageModel
+namespace YourProjectNamespace.Pages
 {
-    private readonly ILogger<IndexModel> _logger;
-
-    public IndexModel(ILogger<IndexModel> logger)
+    public class IndexModel : PageModel
     {
-        _logger = logger;
-    }
+        public string WelcomeMessage { get; set; }
+        public string CurrentTime { get; set; }
 
-    public void OnGet()
-    {
-
+        public void OnGet()
+        {
+            WelcomeMessage = "Hello! This is your Capstone Project deployed on Azure.";
+            CurrentTime = DateTime.Now.ToString("f"); // Full date/time pattern (long time)
+        }
     }
 }
