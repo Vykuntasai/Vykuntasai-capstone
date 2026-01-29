@@ -12,6 +12,8 @@ def divide(x, y):
         return x / y
     else:
         return "Cannot divide by zero"
+def func():
+    print("All the functions succeeded")
 
 def main():
     print("Simple Calculator")
@@ -45,4 +47,5 @@ def main():
         print("Invalid operation choice.")
 
 if _name_ == "_main_":
+
     main()
